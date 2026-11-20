@@ -1,0 +1,2 @@
+A root with no os-release file. ENV-001 reports that it cannot tell the
+distribution.

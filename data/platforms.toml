@@ -1,0 +1,23 @@
+# Platforms the Regolith package archive publishes packages for.
+#
+# Source: the archive at https://archive.regolith-desktop.com, checked on
+# 2026-11-20. It has exactly two trees, ubuntu/ and debian/. The Release
+# files of ubuntu/stable noble and resolute and of debian/stable trixie all
+# say "Architectures: all amd64 arm64".
+#
+# Used by ENV-001.
+
+# Values of os-release ID (or one of the ID_LIKE entries) that Regolith
+# supports. Derivatives that name one of these in ID_LIKE are handled by
+# APT-007, not ENV-001.
+distributions = ["ubuntu", "debian"]
+
+# Kernel machine names (as in /proc/sys/kernel/arch or `uname -m`) and the
+# Debian architecture the archive builds for each.
+[[architectures]]
+kernel = "x86_64"
+debian = "amd64"
+
+[[architectures]]
+kernel = "aarch64"
+debian = "arm64"
